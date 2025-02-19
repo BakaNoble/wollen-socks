@@ -34,6 +34,10 @@ RUN mkdir /nordvpn && cd /nordvpn && \
     curl -s https://downloads.nordcdn.com/configs/archives/servers/ovpn.zip > ovpn.zip && \
     unzip -j ovpn.zip > /dev/null && rm ovpn.zip
 
+RUN mkdir /fastest && cd /fastest && \
+    curl -s https://support.fastestvpn.com/download/fastestvpn_ovpn > fastestvpn_ovpn.zip && \
+    unzip -j fastestvpn_ovpn.zip > /dev/null && rm fastestvpn_ovpn.zip
+
 RUN mkdir /scripts
 COPY /scripts/* /scripts/
 RUN chmod +x /scripts/*
