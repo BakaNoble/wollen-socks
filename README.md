@@ -12,6 +12,7 @@ docker run \
   --env VPN_PASS=... \
   --env VPN_FILE=/surfshark/nl-ams.prod.surfshark.com_udp.ovpn \
   --cap-add NET_ADMIN \
+  --device /dev/net/tun \
   ghcr.io/wolph/wollen-socks:master
 ```
 
